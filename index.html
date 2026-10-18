@@ -62,7 +62,7 @@ a{color:inherit;text-decoration:none}
 .hero-foto figcaption b{color:#fff;font-weight:600}
 
 /* liczby */
-.liczby{background:var(--asfalt2);color:#fff;border-top:1px solid var(--linia)}
+.liczby{grid-column:1/-1;background:var(--asfalt2);color:#fff;border-top:1px solid var(--linia)}
 .liczby .w{display:grid;grid-template-columns:repeat(4,1fr)}
 .liczby .w>div{padding:26px 20px 24px 0;border-right:1px solid var(--linia)}
 .liczby .w>div+div{padding-left:28px}
@@ -182,10 +182,13 @@ footer .kon{color:#7D828B}
   .hero .lead{font-size:1rem;margin-top:14px}
   .hero .cta{flex-direction:column;margin-top:24px}.hero .cta .btn{width:100%}
   .hero-foto figcaption{font-size:.76rem;padding:9px 12px}
-  .hero-foto{order:-1}
+  .hero-foto{order:-2;aspect-ratio:16/10}
+  .liczby{order:-1}
+  .liczby .w>div{padding:12px 10px 11px 0!important}
+  .liczby .w>div:nth-child(2n){padding-left:16px!important}
+  .liczby b{font-size:1.75rem}.liczby span{margin-top:3px;font-size:.76rem;line-height:1.3}
   .hero .cta{display:none}
   .hero-txt{padding:28px 18px 32px}
-  .liczby b{font-size:2.1rem}.liczby span{font-size:.8rem}
   .sek{padding:60px 0}
   .nagl{margin-bottom:28px}
   .uslugi{grid-template-columns:1fr}
@@ -240,14 +243,14 @@ footer .kon{color:#7D828B}
     <img src="img/r-fasada.webp" alt="Budynek serwisu Auto Reich przy ul. Barniewickiej 48c w Gdańsku" width="1360" height="1020" fetchpriority="high">
     <figcaption><b>Auto Reich · Q Service Castrol</b> &nbsp;ul. Barniewicka 48c</figcaption>
   </figure>
-</div></section>
-
-<div class="liczby"><div class="w">
+  <div class="liczby"><div class="w">
   <div><b>46 lat</b><span>na rynku</span></div>
   <div><b>10</b><span>stanowisk naprawczych</span></div>
   <div><b>20</b><span>mechaników</span></div>
-  <div><b>1500+</b><span>kompletów opon w przechowalni</span></div>
+  <div><b>1500+</b><span>kompletów opon<br>w przechowalni</span></div>
 </div></div>
+</div></section>
+
 
 <section class="sek" id="uslugi"><div class="w">
   <div class="nagl">
