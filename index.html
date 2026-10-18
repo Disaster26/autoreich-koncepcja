@@ -182,6 +182,9 @@ footer .kon{color:#7D828B}
   .hero .lead{font-size:1rem;margin-top:14px}
   .hero .cta{flex-direction:column;margin-top:24px}.hero .cta .btn{width:100%}
   .hero-foto figcaption{font-size:.76rem;padding:9px 12px}
+  .hero-foto{order:-1}
+  .hero .cta{display:none}
+  .hero-txt{padding:28px 18px 32px}
   .liczby b{font-size:2.1rem}.liczby span{font-size:.8rem}
   .sek{padding:60px 0}
   .nagl{margin-bottom:28px}
@@ -199,8 +202,6 @@ footer .kon{color:#7D828B}
   .dol{display:grid;grid-template-columns:1fr 1.3fr;position:fixed;left:0;right:0;bottom:0;z-index:50;padding-bottom:max(env(safe-area-inset-bottom),4px);background:#fff;border-top:1px solid var(--papier2);box-shadow:0 -6px 20px rgba(0,0,0,.08)}
   .dol a{display:flex;align-items:center;justify-content:center;gap:8px;height:56px;font:700 .95rem Inter}
   .dol .op{background:var(--czerw);color:#fff}
-  .dol{transform:translateY(110%);transition:transform .3s var(--ease)}
-  .dol.wid{transform:none}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
@@ -343,9 +344,5 @@ footer .kon{color:#7D828B}
 <footer><div class="w"><span>Auto Reich Serwis · ul. Barniewicka 48c, Gdańsk</span><span class="kon">Koncepcja strony głównej, wersja robocza</span></div></footer>
 
 <nav class="dol"><a href="tel:+48585545501">Zadzwoń</a><a class="op" href="https://wymianaopon.pl/calendar/embed/825?widget=1">Umów opony online</a></nav>
-<script>
-(function(){var d=document.querySelector('.dol'),c=document.querySelector('.hero .cta');if(!d||!c||!('IntersectionObserver' in window)){d&&d.classList.add('wid');return}
-new IntersectionObserver(function(e){d.classList.toggle('wid',!e[0].isIntersecting&&e[0].boundingClientRect.top<0)}).observe(c)})();
-</script>
 </body>
 </html>
