@@ -4,187 +4,210 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#141518">
-<title>Auto Reich - koncepcja strony głównej</title>
+<meta name="theme-color" content="#151619">
+<title>Auto Reich Serwis Gdańsk - koncepcja strony głównej</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="preload" as="image" href="img/fasada.webp" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700;800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="preload" as="image" href="img/r-fasada.webp" fetchpriority="high">
 <style>
 :root{
-  --asfalt:#141518;--asfalt2:#1C1E22;--linia:rgba(255,255,255,.12);
-  --papier:#F4F2EE;--papier2:#E9E5DE;--tekst:#1A1B1E;--szary:#5C6068;--jasny:#C9CCD2;
-  --czerw:#D3261C;--pom:#F28C1B;--ease:cubic-bezier(.23,1,.32,1);
+  --asfalt:#151619;--asfalt2:#1E2024;--linia:rgba(255,255,255,.12);
+  --papier:#F5F4F1;--papier2:#E6E3DD;--tekst:#17181B;--szary:#5A5E66;--jasny:#B9BDC4;
+  --czerw:#D3261C;--czerw2:#B71E15;--ease:cubic-bezier(.23,1,.32,1);
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--papier);color:var(--tekst);font:400 16.5px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--papier);color:var(--tekst);font:400 16.5px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
-.w{max-width:1200px;margin:0 auto;padding:0 24px}
-.h{font-family:"Saira Condensed",sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.005em;line-height:.95;margin:0}
-.etk{display:inline-flex;align-items:center;gap:10px;font:700 .74rem/1 Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--czerw)}
-.etk::before{content:"";width:22px;height:3px;background:linear-gradient(90deg,var(--czerw),var(--pom))}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:4px;font:700 .95rem Inter;letter-spacing:.01em;border:2px solid transparent;transition:transform .16s var(--ease),background .2s,color .2s,border-color .2s;white-space:nowrap}
+.w{max-width:1200px;margin:0 auto;padding:0 28px}
+.h{font-family:"Saira Condensed",sans-serif;font-weight:800;text-transform:uppercase;line-height:.96;letter-spacing:.003em;margin:0}
+.etk{display:block;font:700 .74rem/1 Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--czerw);margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:3px;font:700 .95rem Inter;border:2px solid transparent;transition:transform .16s var(--ease),background .2s,color .2s,border-color .2s;white-space:nowrap}
 .btn:active{transform:scale(.97)}
-.btn-cz{background:var(--czerw);color:#fff}.btn-cz:hover{background:#B81F16}
-.btn-obr{border-color:currentColor}.btn-obr:hover{background:var(--tekst);color:#fff;border-color:var(--tekst)}
-.ciemna .btn-obr:hover{background:#fff;color:var(--asfalt);border-color:#fff}
-.wersja{position:fixed;right:12px;top:120px;z-index:40;background:var(--pom);color:#141518;font:700 10.5px Inter;letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:3px}
+.btn-cz{background:var(--czerw);color:#fff}.btn-cz:hover{background:var(--czerw2)}
+.btn-obr{border-color:rgba(255,255,255,.35);color:#fff}.btn-obr:hover{border-color:#fff}
+.btn-ciem{border-color:var(--tekst);color:var(--tekst)}.btn-ciem:hover{background:var(--tekst);color:#fff}
+.btn svg{flex:none}
 
 /* pasek gorny */
-.info{background:var(--asfalt);color:var(--jasny);font-size:.84rem}
-.info .w{display:flex;gap:22px;align-items:center;height:38px}
+.info{background:#0E0F11;color:var(--jasny);font-size:.83rem}
+.info .w{display:flex;gap:24px;align-items:center;height:38px}
 .info b{color:#fff;font-weight:600}
-.info .prawo{margin-left:auto;display:flex;gap:18px}
+.info .prawo{margin-left:auto;display:flex;gap:22px}
 .info a:hover{color:#fff}
 
 /* naglowek */
 .nag{background:#fff;border-bottom:1px solid var(--papier2);position:sticky;top:0;z-index:30}
-.nag .w{display:flex;align-items:center;gap:28px;height:72px}
-.nag .logo img{height:50px;width:auto}
-.menu{display:flex;gap:22px;margin-left:auto;font:600 .92rem Inter}
+.nag .w{display:flex;align-items:center;gap:30px;height:74px}
+.nag .logo img{height:52px;width:auto}
+.menu{display:flex;gap:26px;margin-left:auto;font:600 .93rem Inter}
 .menu a{padding:6px 0;position:relative;color:#2A2C31}
 .menu a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--czerw);transform:scaleX(0);transform-origin:left;transition:transform .22s var(--ease)}
 .menu a:hover::after{transform:scaleX(1)}
-.burger{display:none;margin-left:auto;width:44px;height:44px;border:1px solid var(--papier2);border-radius:6px;background:#fff;padding:0}
-.burger span{display:block;width:20px;height:2px;background:var(--tekst);margin:4px auto}
+.nag .tel{display:none}
 
 /* hero */
-.hero{background:var(--asfalt);color:#fff;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.025) 0 2px,transparent 2px 22px);pointer-events:none}
-.hero .w{position:relative;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding-top:64px;padding-bottom:64px}
-.hero h1{font-size:clamp(2.6rem,5.6vw,4.9rem)}
-.hero h1 span{display:block;background:linear-gradient(90deg,var(--czerw),var(--pom));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .lead{margin:20px 0 0;max-width:520px;color:var(--jasny);font-size:1.08rem}
-.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.liczby{display:grid;grid-template-columns:repeat(3,1fr);margin-top:38px;border-top:1px solid var(--linia)}
-.liczby div{padding:16px 14px 0 0}
-.liczby b{display:block;font:800 2.3rem/1 "Saira Condensed";color:#fff}
-.liczby span{font-size:.84rem;color:var(--jasny)}
-.foto{position:relative}
-.foto img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:6px;clip-path:polygon(7% 0,100% 0,100% 100%,0 100%,0 12%)}
-.foto::after{content:"";position:absolute;left:-14px;bottom:-14px;width:46%;height:46%;border-left:4px solid var(--czerw);border-bottom:4px solid var(--pom);border-radius:0 0 0 6px;pointer-events:none}
-.foto .podpis{position:absolute;right:12px;bottom:12px;background:rgba(20,21,24,.82);backdrop-filter:blur(4px);padding:8px 12px;border-radius:4px;font-size:.82rem;color:#fff}
-.foto .podpis b{display:block;font-weight:700}
+.hero{background:var(--asfalt);color:#fff;position:relative}
+.hero-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:600px}
+.hero-txt{padding:72px 56px 64px max(28px,calc((100vw - 1200px)/2 + 28px));display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(2.9rem,5.4vw,5rem)}
+.hero h1 em{font-style:normal;color:var(--czerw)}
+.hero .lead{margin:22px 0 0;max-width:500px;color:var(--jasny);font-size:1.08rem}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero-foto{position:relative;margin:0}
+.hero-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% 55%}
+.hero-foto figcaption{position:absolute;left:0;bottom:0;background:var(--asfalt);padding:12px 18px;font-size:.82rem;color:var(--jasny)}
+.hero-foto figcaption b{color:#fff;font-weight:600}
+
+/* liczby */
+.liczby{background:var(--asfalt2);color:#fff;border-top:1px solid var(--linia)}
+.liczby .w{display:grid;grid-template-columns:repeat(4,1fr)}
+.liczby .w>div{padding:26px 20px 24px 0;border-right:1px solid var(--linia)}
+.liczby .w>div+div{padding-left:28px}
+.liczby .w>div:last-child{border-right:0}
+.liczby b{display:block;font:800 2.6rem/1 "Saira Condensed"}
+.liczby span{display:block;margin-top:6px;font-size:.86rem;color:var(--jasny)}
+
+/* sekcje */
+.sek{padding:96px 0}
+.nagl{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:44px}
+.nagl .h{font-size:clamp(2.2rem,4.4vw,3.5rem)}
+.nagl p{margin:0;color:var(--szary);max-width:460px;justify-self:end}
 
 /* uslugi */
-.sek{padding:88px 0}
-.nagl{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:34px}
-.nagl .h{font-size:clamp(2.1rem,4.4vw,3.4rem);margin-top:10px}
-.nagl p{margin:0;max-width:440px;color:var(--szary)}
-.uslugi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.usl{position:relative;display:flex;flex-direction:column;background:#fff;border-radius:6px;overflow:hidden;border:1px solid var(--papier2);transition:transform .25s var(--ease),box-shadow .25s}
-.usl:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(20,21,24,.12)}
-.usl .img{aspect-ratio:16/10;overflow:hidden;background:var(--asfalt)}
-.usl .img img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
-.usl:hover .img img{transform:scale(1.04)}
-.usl .tr{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
-.usl .nr{font:800 .9rem "Saira Condensed";color:var(--czerw);letter-spacing:.06em}
-.usl h3{font:800 1.55rem/1 "Saira Condensed";text-transform:uppercase;margin:0}
-.usl p{margin:0;color:var(--szary);font-size:.95rem;flex:1}
-.usl .wiecej{font-weight:700;font-size:.9rem;color:var(--tekst);margin-top:4px}
-.usl.szkody{background:var(--asfalt);color:#fff;border-color:var(--asfalt)}
-.usl.szkody .img{display:grid;place-items:center;background:linear-gradient(135deg,#2A1312,var(--asfalt) 60%)}
-.usl.szkody .ikona{width:86px;height:86px;border-radius:50%;display:grid;place-items:center;border:3px solid var(--pom);color:var(--pom)}
-.usl.szkody p{color:var(--jasny)}.usl.szkody .wiecej{color:var(--pom)}
+.uslugi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--tekst)}
+.usl{display:flex;flex-direction:column;padding:26px 28px 30px 0;border-bottom:1px solid var(--papier2)}
+.usl+.usl{padding-left:28px;border-left:1px solid var(--papier2)}
+.usl:nth-child(3n+1){padding-left:0;border-left:0}
+.usl .nr{font:800 .95rem "Saira Condensed";color:var(--czerw);letter-spacing:.06em}
+.usl h3{font:800 1.75rem/1 "Saira Condensed";text-transform:uppercase;margin:8px 0 10px}
+.usl p{margin:0;color:var(--szary);font-size:.97rem;flex:1}
+.usl .wiecej{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-weight:700;font-size:.9rem}
+.usl .wiecej i{font-style:normal;transition:transform .2s var(--ease)}
+.usl:hover .wiecej i{transform:translateX(4px)}
+
+/* warsztat - zdjecia */
+.warsztat{background:var(--asfalt);color:#fff}
+.warsztat .nagl p{color:var(--jasny)}
+.galeria{display:grid;grid-template-columns:1.6fr 1fr 1fr;grid-template-rows:280px 280px;gap:10px}
+.galeria figure{margin:0;position:relative;overflow:hidden;background:#000}
+.galeria img{width:100%;height:100%;object-fit:cover}
+.galeria .g1{grid-row:1/3}
+.galeria figcaption{position:absolute;left:0;bottom:0;padding:8px 12px;background:rgba(14,15,17,.86);font-size:.8rem;color:#E4E6EA}
 
 /* opony */
-.opony{background:var(--asfalt);color:#fff}
-.opony .w{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
-.opony .lewa{padding:72px 48px 72px 0}
-.opony .h{font-size:clamp(2.1rem,4.2vw,3.2rem);margin:12px 0 16px}
-.opony p{color:var(--jasny);margin:0 0 22px;max-width:480px}
-.opony ul{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:10px}
-.opony li{display:flex;gap:12px;align-items:flex-start;color:#E4E6EA}
-.opony li::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:radial-gradient(circle,var(--pom) 0 38%,transparent 40%),conic-gradient(var(--czerw),var(--pom),var(--czerw));}
-.opony .prawa{position:relative;min-height:420px}
-.opony .prawa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.opony .licznik{position:absolute;left:24px;bottom:24px;background:#fff;color:var(--tekst);padding:16px 18px;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
-.opony .licznik b{display:block;font:800 2.4rem/1 "Saira Condensed";color:var(--czerw)}
-.opony .licznik span{font-size:.85rem;color:var(--szary)}
+.opony .w{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.opony .h{font-size:clamp(2.2rem,4.2vw,3.3rem);margin-bottom:18px}
+.opony p{color:var(--szary);margin:0 0 22px;max-width:480px}
+.lista{list-style:none;margin:0 0 30px;padding:0;border-top:1px solid var(--papier2)}
+.lista li{padding:12px 0 12px 28px;border-bottom:1px solid var(--papier2);position:relative}
+.lista li::before{content:"";position:absolute;left:0;top:21px;width:14px;height:2px;background:var(--czerw)}
+.opony .fot{position:relative}
+.opony .fot img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.opony .licznik{position:absolute;right:0;bottom:0;background:var(--czerw);color:#fff;padding:16px 20px}
+.opony .licznik b{display:block;font:800 2.4rem/1 "Saira Condensed"}
+.opony .licznik span{font-size:.84rem}
 
-/* jak pracujemy */
-.kroki{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:3px solid var(--tekst)}
-.krok{padding:26px 26px 0 0}
-.krok b{font:800 3rem/1 "Saira Condensed";color:transparent;-webkit-text-stroke:1.5px var(--czerw)}
-.krok h3{font:800 1.45rem/1.05 "Saira Condensed";text-transform:uppercase;margin:10px 0 8px}
-.krok p{margin:0;color:var(--szary)}
+/* szkody */
+.szkody{background:var(--czerw);color:#fff;padding:72px 0}
+.szkody .w{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}
+.szkody .etk{color:#fff;opacity:.8}
+.szkody .h{font-size:clamp(2.2rem,4.2vw,3.3rem)}
+.szkody p{margin:0 0 18px;color:#FBE4E2}
+.szkody .kr{display:grid;gap:0;border-top:1px solid rgba(255,255,255,.3)}
+.szkody .kr div{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.3)}
+.szkody .kr b{font:800 1.3rem/1.3 "Saira Condensed";min-width:26px}
+.szkody .btn{background:#fff;color:var(--czerw)}.szkody .btn:hover{background:var(--asfalt);color:#fff}
 
-/* biuro */
-.biuro{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
-.biuro img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px}
-.biuro .h{font-size:clamp(2rem,4vw,3rem);margin:12px 0 16px}
-.biuro p{color:var(--szary);margin:0 0 14px}
-.partnerzy{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-.partnerzy span{border:1px solid var(--papier2);background:#fff;border-radius:4px;padding:10px 14px;font:700 .85rem Inter;letter-spacing:.04em}
-.partnerzy .q{color:#1DA032}.partnerzy .c{color:#D3261C}
+/* o nas */
+.onas{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.onas img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.onas .h{font-size:clamp(2.1rem,4vw,3.1rem);margin-bottom:18px}
+.onas p{color:var(--szary);margin:0 0 14px}
+.kroki{margin-top:28px;border-top:2px solid var(--tekst)}
+.krok{display:grid;grid-template-columns:48px 1fr;gap:4px 12px;padding:16px 0;border-bottom:1px solid var(--papier2)}
+.krok b{grid-row:1/3;font:800 1.6rem/1 "Saira Condensed";color:var(--czerw)}
+.krok h3{margin:0;font-size:1rem}
+.krok p{margin:0;font-size:.93rem}
+.partnerzy{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.partnerzy span{border:1px solid var(--papier2);background:#fff;padding:9px 14px;font:700 .82rem Inter;letter-spacing:.05em}
+.partnerzy .q{color:#1A9A30}.partnerzy .c{color:var(--czerw)}
 
 /* kontakt */
 .kontakt{background:#fff;border-top:1px solid var(--papier2)}
-.kontakt .w{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:stretch}
-.kontakt .h{font-size:clamp(2rem,4vw,3rem);margin:12px 0 22px}
+.kontakt .w{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:stretch}
+.kontakt .h{font-size:clamp(2.1rem,4vw,3.1rem);margin-bottom:24px}
 .kontakt dl{margin:0}
 .kontakt dl div{padding:14px 0;border-top:1px solid var(--papier2)}
-.kontakt dt{font:700 .74rem Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--szary);margin-bottom:4px}
+.kontakt dt{font:700 .72rem Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--szary);margin-bottom:4px}
 .kontakt dd{margin:0;font-size:1.1rem;font-weight:600}
-.kontakt dd a{border-bottom:2px solid var(--pom)}
-.mapa{border-radius:6px;overflow:hidden;min-height:380px;border:1px solid var(--papier2)}
-.mapa iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
-footer{background:var(--asfalt);color:var(--jasny);font-size:.88rem;padding:30px 0 40px}
-footer .w{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.kontakt .przyc{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.mapa{overflow:hidden;min-height:400px;border:1px solid var(--papier2)}
+.mapa iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+footer{background:#0E0F11;color:var(--jasny);font-size:.85rem;padding:28px 0 36px}
+footer .w{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}
+footer .kon{color:#7D828B}
 
 .dol{display:none}
 
 @media(max-width:1000px){
-  .menu,.nag .btn{display:none}.burger{display:block}
-  .hero .w{grid-template-columns:1fr;gap:34px;padding-top:34px;padding-bottom:44px}
-  .foto{order:-1}
+  .menu,.nag .btn{display:none}
+  .nag .tel{display:inline-flex;margin-left:auto;align-items:center;gap:8px;height:42px;padding:0 14px;border:1.5px solid var(--tekst);border-radius:3px;font:700 .88rem Inter}
+  .hero-in{grid-template-columns:1fr;min-height:0}
+  .hero-txt{padding:40px 28px 36px}
+  .hero-foto{aspect-ratio:4/3}
+  .liczby .w{grid-template-columns:1fr 1fr}
+  .liczby .w>div{padding:20px 12px 18px 0!important;border-right:0;border-bottom:1px solid var(--linia)}
+  .liczby .w>div:nth-child(2n){padding-left:20px!important;border-left:1px solid var(--linia)}
+  .liczby .w>div:nth-child(n+3){border-bottom:0}
+  .nagl{grid-template-columns:1fr;gap:14px}.nagl p{justify-self:start}
   .uslugi{grid-template-columns:1fr 1fr}
-  .opony .w{grid-template-columns:1fr;padding:0}.opony .lewa{padding:56px 24px}.opony .prawa{min-height:320px}
-  .biuro,.kontakt .w{grid-template-columns:1fr;gap:28px}
-  .nagl{flex-direction:column;align-items:flex-start;gap:12px}
+  .usl,.usl+.usl{padding:22px 22px 24px 0;border-left:0}
+  .usl:nth-child(2n){padding-left:22px;border-left:1px solid var(--papier2)}
+  .galeria{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .galeria figure{aspect-ratio:4/3}
+  .galeria .g1{grid-row:auto;grid-column:1/-1;aspect-ratio:16/10}
+  .opony .w,.szkody .w,.onas,.kontakt .w{grid-template-columns:1fr;gap:32px}
+  .opony .fot{order:-1}
 }
 @media(max-width:640px){
   body{font-size:16px}
   .w{padding:0 18px}
-  .info .w{height:34px;font-size:.8rem}.info .lewa-adr,.info .prawo .mail{display:none}
-  .nag .w{height:62px}.nag .logo img{height:42px}
-  .hero h1{font-size:clamp(2.4rem,11vw,3.2rem)}
+  .info{display:none}
+  .nag .w{height:64px;gap:12px}.nag .logo img{height:42px}
+  .hero-txt{padding:30px 18px 28px}
+  .hero h1{font-size:clamp(2.45rem,11.6vw,3.3rem)}
   .hero .lead{font-size:1rem;margin-top:14px}
-  .hero .cta{flex-direction:column}.hero .cta .btn{width:100%}
-  .liczby{margin-top:28px}.liczby b{font-size:1.9rem}.liczby span{font-size:.78rem}
-  .foto img{aspect-ratio:16/8.5;object-position:60% 40%}
-  .etk{letter-spacing:.1em;font-size:.68rem}
-  .foto::after{left:-8px;bottom:-8px}
+  .hero .cta{flex-direction:column;margin-top:24px}.hero .cta .btn{width:100%}
+  .hero-foto figcaption{font-size:.76rem;padding:9px 12px}
+  .liczby b{font-size:2.1rem}.liczby span{font-size:.8rem}
   .sek{padding:60px 0}
-  .uslugi{grid-template-columns:1fr;gap:12px}
-  .usl{flex-direction:row}
-  .usl .img{flex:0 0 38%;aspect-ratio:auto;min-height:150px}
-  .usl .tr{padding:14px 14px 14px 16px;gap:5px}
-  .usl h3{font-size:1.3rem}.usl p{font-size:.86rem;line-height:1.45}
-  .usl.szkody .ikona{width:58px;height:58px}.usl.szkody .ikona svg{width:28px;height:28px}
-  .opony .lewa{padding:48px 18px}
-  .opony .btn{width:100%}
-  .kroki{grid-template-columns:1fr}.krok{padding:22px 0 0}
-  .mapa,.mapa iframe{min-height:280px}
-  footer{padding-bottom:96px}
-  .wersja{top:auto;bottom:70px}
-  .dol{display:grid;grid-template-columns:1fr 1.25fr;position:fixed;left:0;right:0;bottom:0;z-index:50;padding-bottom:max(env(safe-area-inset-bottom),4px);background:#fff;border-top:1px solid var(--papier2)}
-  .dol a{display:flex;align-items:center;justify-content:center;gap:8px;height:54px;font:700 .95rem Inter}
+  .nagl{margin-bottom:28px}
+  .uslugi{grid-template-columns:1fr}
+  .usl,.usl+.usl,.usl:nth-child(2n){padding:20px 0 22px;border-left:0}
+  .usl h3{font-size:1.55rem}
+  .galeria{gap:8px}
+  .galeria figcaption{font-size:.72rem;padding:6px 9px}
+  .szkody{padding:56px 0}
+  .opony .btn,.szkody .btn{width:100%}
+  .opony .licznik{padding:12px 14px}.opony .licznik b{font-size:1.9rem}
+  .kontakt .przyc .btn{flex:1 1 100%}
+  .mapa,.mapa iframe{min-height:300px}
+  footer{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+  .dol{display:grid;grid-template-columns:1fr 1.3fr;position:fixed;left:0;right:0;bottom:0;z-index:50;padding-bottom:max(env(safe-area-inset-bottom),4px);background:#fff;border-top:1px solid var(--papier2);box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+  .dol a{display:flex;align-items:center;justify-content:center;gap:8px;height:56px;font:700 .95rem Inter}
   .dol .op{background:var(--czerw);color:#fff}
 }
-@media (hover:none){.usl:hover{transform:none;box-shadow:none}.usl:hover .img img{transform:none}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
 
-<div class="wersja">Koncepcja · wersja robocza</div>
-
 <div class="info"><div class="w">
-  <span class="lewa-adr">ul. Barniewicka 48c, 80-299 Gdańsk</span>
-  <div class="prawo"><a href="tel:+48585545501">Tel. <b>(58) 554-55-01</b></a><a class="mail" href="mailto:auto-reich@wp.pl">auto-reich@wp.pl</a></div>
+  <span>ul. Barniewicka 48c, 80-299 Gdańsk</span>
+  <div class="prawo"><a href="tel:+48585545501">Tel. <b>(58) 554-55-01</b></a><a href="mailto:auto-reich@wp.pl">auto-reich@wp.pl</a></div>
 </div></div>
 
 <header class="nag"><div class="w">
@@ -194,33 +217,34 @@ footer .w{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <a href="#opony">Opony</a>
     <a href="#szkody">Likwidacja szkód</a>
     <a href="#o-nas">O nas</a>
-    <a href="#">Porady</a>
     <a href="#kontakt">Kontakt</a>
   </nav>
   <a class="btn btn-cz" href="https://wymianaopon.pl/calendar/embed/825?widget=1">Umów wymianę opon</a>
-  <button class="burger" type="button" aria-label="Menu"><span></span><span></span><span></span></button>
+  <a class="tel" href="tel:+48585545501"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Zadzwoń</a>
 </div></header>
 
-<section class="hero"><div class="w">
-  <div>
+<section class="hero"><div class="hero-in">
+  <div class="hero-txt">
     <span class="etk">Serwis samochodowy · Gdańsk Osowa</span>
-    <h1 class="h" style="margin-top:14px">Naprawimy Twoje auto<span>od 46 lat</span></h1>
-    <p class="lead">Mechanika, opony, blacharstwo i likwidacja szkód, elektronika, geometria i klimatyzacja. Wszystko w jednym serwisie przy ul. Barniewickiej, bez jeżdżenia od warsztatu do warsztatu.</p>
+    <h1 class="h">Naprawimy<br>Twoje auto.<br><em>Od 46 lat.</em></h1>
+    <p class="lead">Mechanika, opony, blacharstwo z likwidacją szkód, elektronika, geometria i klimatyzacja. Wszystko w jednym miejscu przy ul. Barniewickiej.</p>
     <div class="cta">
       <a class="btn btn-cz" href="tel:+48585545501">Zadzwoń: (58) 554-55-01</a>
       <a class="btn btn-obr" href="https://wymianaopon.pl/calendar/embed/825?widget=1">Umów opony online</a>
     </div>
-    <div class="liczby">
-      <div><b>46 lat</b><span>doświadczenia</span></div>
-      <div><b>10</b><span>stanowisk</span></div>
-      <div><b>20</b><span>mechaników</span></div>
-    </div>
   </div>
-  <div class="foto">
-    <img src="img/fasada.webp" alt="Serwis Auto Reich przy ul. Barniewickiej w Gdańsku" width="704" height="395" fetchpriority="high">
-    <div class="podpis"><b>Auto Reich · Q Service</b>ul. Barniewicka 48c, Gdańsk</div>
-  </div>
+  <figure class="hero-foto">
+    <img src="img/r-fasada.webp" alt="Budynek serwisu Auto Reich przy ul. Barniewickiej 48c w Gdańsku" width="1360" height="1020" fetchpriority="high">
+    <figcaption><b>Auto Reich · Q Service Castrol</b> &nbsp;ul. Barniewicka 48c</figcaption>
+  </figure>
 </div></section>
+
+<div class="liczby"><div class="w">
+  <div><b>46 lat</b><span>na rynku</span></div>
+  <div><b>10</b><span>stanowisk naprawczych</span></div>
+  <div><b>20</b><span>mechaników</span></div>
+  <div><b>1500+</b><span>kompletów opon w przechowalni</span></div>
+</div></div>
 
 <section class="sek" id="uslugi"><div class="w">
   <div class="nagl">
@@ -228,53 +252,75 @@ footer .w{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <p>Każda usługa ma swoją podstronę z opisem, cennikiem i odpowiedziami na pytania, które najczęściej słyszymy przy ladzie.</p>
   </div>
   <div class="uslugi">
-    <a class="usl" href="#"><div class="img"><img src="img/mechanika.webp" alt="Mechanika samochodowa" loading="lazy"></div><div class="tr"><span class="nr">01</span><h3>Mechanika</h3><p>Zawieszenie, hamulce, rozrząd, sprzęgło i wymiana oleju, także dynamiczna w skrzyniach automatycznych.</p><span class="wiecej">Mechanika →</span></div></a>
-    <a class="usl" href="#opony"><div class="img"><img src="img/opony.webp" alt="Wymiana opon i wulkanizacja" loading="lazy"></div><div class="tr"><span class="nr">02</span><h3>Serwis opon</h3><p>Wymiana, wulkanizacja, opony niskoprofilowe i runflat, sprzedaż i przechowalnia opon.</p><span class="wiecej">Opony →</span></div></a>
-    <a class="usl szkody" href="#" id="szkody"><div class="img"><span class="ikona"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17h14l-1.5-5.5A2 2 0 0 0 15.6 10H8.4a2 2 0 0 0-1.9 1.5Z"/><path d="M7 17v2M17 17v2M8 10l1.5-4h5L16 10"/><path d="M12 13v2"/></svg></span></div><div class="tr"><span class="nr">03</span><h3>Blacharstwo i lakiernictwo</h3><p>Naprawy powypadkowe i likwidacja szkód z OC i AC. Prowadzimy sprawę z ubezpieczycielem za Ciebie.</p><span class="wiecej">Likwidacja szkód →</span></div></a>
-    <a class="usl" href="#"><div class="img"><img src="img/elektronika.webp" alt="Elektronika samochodowa" loading="lazy"></div><div class="tr"><span class="nr">04</span><h3>Elektronika</h3><p>Diagnostyka komputerowa, kodowanie sterowników, systemy ABS, ASR i ESP, kamery cofania i tempomaty.</p><span class="wiecej">Elektronika →</span></div></a>
-    <a class="usl" href="#"><div class="img"><img src="img/geometria.webp" alt="Ustawianie geometrii kół" loading="lazy"></div><div class="tr"><span class="nr">05</span><h3>Geometria</h3><p>Prosto ustawiona kierownica i równo zużywające się opony. Pomiar i regulacja zbieżności kół.</p><span class="wiecej">Geometria →</span></div></a>
-    <a class="usl" href="#"><div class="img"><img src="img/klimatyzacja.webp" alt="Serwis klimatyzacji" loading="lazy"></div><div class="tr"><span class="nr">06</span><h3>Klimatyzacja</h3><p>Napełnianie, odgrzybianie i naprawa sprężarek. Sprawna klimatyzacja latem i suche szyby zimą.</p><span class="wiecej">Klimatyzacja →</span></div></a>
+    <a class="usl" href="#"><span class="nr">01</span><h3>Mechanika</h3><p>Zawieszenie, hamulce, rozrząd, sprzęgło i wymiana oleju, także dynamiczna w skrzyniach automatycznych.</p><span class="wiecej">Mechanika <i>→</i></span></a>
+    <a class="usl" href="#opony"><span class="nr">02</span><h3>Serwis opon</h3><p>Wymiana i wyważanie, opony niskoprofilowe i runflat, sprzedaż opon i przechowalnia.</p><span class="wiecej">Opony <i>→</i></span></a>
+    <a class="usl" href="#szkody"><span class="nr">03</span><h3>Blacharstwo</h3><p>Naprawy powypadkowe i lakiernictwo. Likwidacja szkód z OC i AC, sprawę z ubezpieczycielem prowadzimy za Ciebie.</p><span class="wiecej">Likwidacja szkód <i>→</i></span></a>
+    <a class="usl" href="#"><span class="nr">04</span><h3>Elektronika</h3><p>Diagnostyka komputerowa, kodowanie sterowników, ABS, ASR i ESP, kamery cofania i tempomaty.</p><span class="wiecej">Elektronika <i>→</i></span></a>
+    <a class="usl" href="#"><span class="nr">05</span><h3>Geometria</h3><p>Prosto ustawiona kierownica i równo zużywające się opony. Pomiar i regulacja zbieżności kół.</p><span class="wiecej">Geometria <i>→</i></span></a>
+    <a class="usl" href="#"><span class="nr">06</span><h3>Klimatyzacja</h3><p>Napełnianie, odgrzybianie i naprawa sprężarek. Chłodno latem, suche szyby zimą.</p><span class="wiecej">Klimatyzacja <i>→</i></span></a>
   </div>
 </div></section>
 
-<section class="opony" id="opony"><div class="w">
-  <div class="lewa">
+<section class="sek warsztat"><div class="w">
+  <div class="nagl">
+    <div><span class="etk">Zajrzyj do nas</span><h2 class="h">Tak wygląda<br>nasz warsztat</h2></div>
+    <p>Jasna hala, dziesięć podnośników i auta naszych klientów. Bez zdjęć z katalogu, wszystko z Barniewickiej.</p>
+  </div>
+  <div class="galeria">
+    <figure class="g1"><img src="img/r-hala.webp" alt="Hala warsztatowa z podnośnikami" width="1126" height="840" loading="lazy"><figcaption>Hala warsztatowa</figcaption></figure>
+    <figure><img src="img/r-ram.webp" alt="Dodge RAM na stanowisku naprawczym" width="1000" height="1333" loading="lazy" style="object-position:50% 40%"><figcaption>RAM na kanale</figcaption></figure>
+    <figure><img src="img/r-bmw.webp" alt="BMW na podnośniku" width="1000" height="1333" loading="lazy" style="object-position:50% 70%"><figcaption>BMW na podnośniku</figcaption></figure>
+    <figure><img src="img/r-brama.webp" alt="Wjazd numer 3 i serwis klimatyzacji" width="1200" height="1090" loading="lazy"><figcaption>Wjazd 3 · klimatyzacja</figcaption></figure>
+    <figure><img src="img/r-lot.webp" alt="Serwis Auto Reich z lotu ptaka" width="1400" height="788" loading="lazy"><figcaption>Barniewicka z lotu ptaka</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="sek opony" id="opony"><div class="w">
+  <div>
     <span class="etk">Wymiana opon</span>
-    <h2 class="h">Termin wybierasz sam,<br>online</h2>
+    <h2 class="h">Termin wybierasz<br>sam, online</h2>
     <p>Kalendarz zapisów działa przez całą dobę. Wybierasz dzień i godzinę, przyjeżdżasz, a opony czekają już przygotowane.</p>
-    <ul>
+    <ul class="lista">
       <li>Wymiana i wyważanie, także opony niskoprofilowe i runflat</li>
-      <li>Przechowalnia opon w optymalnych warunkach</li>
-      <li>Sprzedaż opon w dobrych cenach, sprawdzimy dostępność za Ciebie</li>
+      <li>Przechowalnia opon w odpowiednich warunkach</li>
+      <li>Sprzedaż opon, dostępność sprawdzimy za Ciebie</li>
     </ul>
     <a class="btn btn-cz" href="https://wymianaopon.pl/calendar/embed/825?widget=1">Umów wymianę opon online</a>
   </div>
-  <div class="prawa">
-    <img src="img/opony.webp" alt="Wulkanizacja w serwisie Auto Reich" loading="lazy">
-    <div class="licznik"><b>1500+</b><span>klientów przechowuje u nas opony</span></div>
+  <div class="fot">
+    <img src="img/r-opony.webp" alt="Opony przygotowane do wymiany w serwisie Auto Reich" width="1400" height="1050" loading="lazy">
+    <div class="licznik"><b>1500+</b><span>kompletów w przechowalni</span></div>
   </div>
 </div></section>
 
-<section class="sek"><div class="w">
-  <div class="nagl">
-    <div><span class="etk">Jak pracujemy</span><h2 class="h">Bez niespodzianek<br>na rachunku</h2></div>
-    <p>Zakres i koszt naprawy znasz, zanim mechanik weźmie klucz do ręki.</p>
+<section class="szkody" id="szkody"><div class="w">
+  <div>
+    <span class="etk">Blacharstwo · likwidacja szkód</span>
+    <h2 class="h">Stłuczka? Szkodą<br>zajmiemy się my</h2>
   </div>
-  <div class="kroki">
-    <div class="krok"><b>01</b><h3>Zgłoszenie</h3><p>Dzwonisz, piszesz albo zapisujesz się online. Ustalamy dogodny termin.</p></div>
-    <div class="krok"><b>02</b><h3>Diagnoza i wycena</h3><p>Sprawdzamy auto i mówimy wprost, co trzeba zrobić teraz, a co może poczekać.</p></div>
-    <div class="krok"><b>03</b><h3>Naprawa i odbiór</h3><p>Naprawiamy w ustalonym zakresie i oddajemy auto z informacją, co zostało wykonane.</p></div>
+  <div>
+    <p>Naprawiamy auta po kolizjach z OC sprawcy i z Twojego AC. Formalności z ubezpieczycielem bierzemy na siebie.</p>
+    <div class="kr">
+      <div><b>1</b><span>Zgłaszasz szkodę u nas, telefonicznie albo na miejscu</span></div>
+      <div><b>2</b><span>Oględziny i kosztorys uzgadniamy z ubezpieczycielem</span></div>
+      <div><b>3</b><span>Odbierasz naprawione auto</span></div>
+    </div>
+    <a class="btn" href="tel:+48585545501" style="margin-top:24px">Zgłoś szkodę: (58) 554-55-01</a>
   </div>
 </div></section>
 
-<section class="sek" id="o-nas" style="padding-top:0"><div class="w biuro">
-  <img src="img/biuro.webp" alt="Biuro obsługi klienta serwisu Auto Reich" loading="lazy">
+<section class="sek" id="o-nas"><div class="w onas">
+  <img src="img/r-biuro.webp" alt="Biuro obsługi klienta serwisu Auto Reich" width="1600" height="1200" loading="lazy">
   <div>
     <span class="etk">O nas</span>
-    <h2 class="h">Serwis z Osowy od 46 lat</h2>
+    <h2 class="h">Serwis z Osowy,<br>od 46 lat</h2>
     <p>Od 46 lat naprawiamy samochody mieszkańców Gdańska. Dziś to 10 stanowisk, 20 mechaników i biuro obsługi, w którym na spokojnie omówisz naprawę.</p>
-    <p>Pracujemy w sieci Q Service Castrol, na sprawdzonych częściach i olejach.</p>
-    <div class="partnerzy"><span class="q">Q SERVICE</span><span class="c">Castrol</span><span>wymianaopon.pl</span></div>
+    <div class="kroki">
+      <div class="krok"><b>01</b><h3>Zgłoszenie</h3><p>Dzwonisz, piszesz albo zapisujesz się online.</p></div>
+      <div class="krok"><b>02</b><h3>Diagnoza i wycena</h3><p>Mówimy wprost, co trzeba zrobić teraz, a co może poczekać.</p></div>
+      <div class="krok"><b>03</b><h3>Naprawa i odbiór</h3><p>Zakres i koszt znasz, zanim mechanik weźmie klucz do ręki.</p></div>
+    </div>
+    <div class="partnerzy"><span class="q">Q SERVICE</span><span class="c">Castrol</span></div>
   </div>
 </div></section>
 
@@ -287,12 +333,12 @@ footer .w{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <div><dt>Telefon do biura</dt><dd><a href="tel:+48585545501">(58) 554-55-01</a></dd></div>
       <div><dt>E-mail</dt><dd><a href="mailto:auto-reich@wp.pl">auto-reich@wp.pl</a></dd></div>
     </dl>
-    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:22px"><a class="btn btn-cz" href="tel:+48585545501">Zadzwoń</a><a class="btn btn-obr" href="https://wymianaopon.pl/calendar/embed/825?widget=1">Umów opony online</a></div>
+    <div class="przyc"><a class="btn btn-cz" href="tel:+48585545501">Zadzwoń</a><a class="btn btn-ciem" href="https://www.google.com/maps/dir/?api=1&destination=Serwis+Auto-Reich+Barniewicka+48c+Gdansk">Wyznacz trasę</a></div>
   </div>
   <div class="mapa"><iframe loading="lazy" title="Mapa dojazdu do serwisu Auto Reich" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2321.1046078201034!2d18.455311776970532!3d54.42578649341245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd9f80280bd3cb%3A0x517541368779286f!2sSerwis%20Auto-Reich!5e0!3m2!1spl!2spl!4v1712351358647!5m2!1spl!2spl"></iframe></div>
 </div></section>
 
-<footer><div class="w"><span>Auto Reich Serwis · Andrzej Reich · ul. Barniewicka 48c, Gdańsk</span><span>Koncepcja strony głównej. Zdjęcia z obecnej strony auto-reich.pl.</span></div></footer>
+<footer><div class="w"><span>Auto Reich Serwis · ul. Barniewicka 48c, Gdańsk</span><span class="kon">Koncepcja strony głównej, wersja robocza</span></div></footer>
 
 <nav class="dol"><a href="tel:+48585545501">Zadzwoń</a><a class="op" href="https://wymianaopon.pl/calendar/embed/825?widget=1">Umów opony online</a></nav>
 </body>
