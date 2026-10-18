@@ -182,7 +182,9 @@ footer .kon{color:#7D828B}
   .hero .lead{font-size:1rem;margin-top:14px}
   .hero .cta{flex-direction:column;margin-top:24px}.hero .cta .btn{width:100%}
   .hero-foto figcaption{font-size:.76rem;padding:9px 12px}
-  .hero-foto{order:-2;aspect-ratio:16/10}
+  .hero-foto img{object-position:28% 55%}
+  .hero-foto{order:-2;aspect-ratio:auto;height:calc(100vh - 279px);height:calc(100svh - 279px);min-height:190px}
+  .nag .tel{padding:0 12px;letter-spacing:.01em}
   .liczby{order:-1}
   .liczby .w>div{padding:12px 10px 11px 0!important}
   .liczby .w>div:nth-child(2n){padding-left:16px!important}
@@ -226,7 +228,7 @@ footer .kon{color:#7D828B}
     <a href="#kontakt">Kontakt</a>
   </nav>
   <a class="btn btn-cz" href="https://wymianaopon.pl/calendar/embed/825?widget=1">Umów wymianę opon</a>
-  <a class="tel" href="tel:+48585545501"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>Zadzwoń</a>
+  <a class="tel" href="tel:+48585545501"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>(58) 554-55-01</a>
 </div></header>
 
 <section class="hero"><div class="hero-in">
@@ -347,5 +349,12 @@ footer .kon{color:#7D828B}
 <footer><div class="w"><span>Auto Reich Serwis · ul. Barniewicka 48c, Gdańsk</span><span class="kon">Koncepcja strony głównej, wersja robocza</span></div></footer>
 
 <nav class="dol"><a href="tel:+48585545501">Zadzwoń</a><a class="op" href="https://wymianaopon.pl/calendar/embed/825?widget=1">Umów opony online</a></nav>
+<script>
+/* telefon: zdjecie + statystyki wypelniaja dokladnie pierwszy ekran (miedzy naglowkiem a dolnym paskiem) */
+(function(){var f=document.querySelector('.hero-foto'),n=document.querySelector('.nag'),d=document.querySelector('.dol'),l=document.querySelector('.liczby'),sz=0;
+function u(){if(innerWidth>640){f.style.height='';return}if(sz===innerWidth&&f.style.height)return;sz=innerWidth;
+var hh=innerHeight-n.offsetHeight-d.offsetHeight-l.offsetHeight;f.style.height=Math.max(190,hh)+'px'}
+u();addEventListener('load',u);addEventListener('resize',u)})();
+</script>
 </body>
 </html>
